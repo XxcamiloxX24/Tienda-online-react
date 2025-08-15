@@ -1,0 +1,340 @@
+
+.Bienvenida{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 15%;
+  padding-top: 5%;
+  width: 100%;
+  height: 100%;
+  h1{
+    width: 40%;
+    color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    transition: 0.5s ease;
+  }
+  h1:hover{
+    transition: 0.5s ease;
+    transform: scaleY(-1);
+    
+  }
+  h2{
+    color: gray;
+  }
+  .btnIniciar{
+    background-color: brown;
+    width: 10%;
+    height: 3%;
+    padding: 1%;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    box-shadow: 0px 0px 10px black;
+  }
+  .btnIniciar:hover{
+    background-color: rgb(235, 66, 66);
+    transform: scale(1.08);
+    transition: 0.5s ease;
+  }
+}
+.lgn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+}
+.box{
+  height: 70dvh;
+  width: 40dvw;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  hr{
+     width: 80%;
+    border: none;
+    height: 1px;
+    background-color: black;
+  }
+  .formulario{
+    margin: 5% 0%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .btnLogin{
+      height: 40px;
+      border: 1px solid black;
+      background-color: white;
+      border-radius: 10px;
+      transition: .2s ease;
+      cursor: pointer;
+    }
+    .btnLogin:hover{
+      color: white;
+      background-color: brown;
+      transition: .2s ease;
+    }
+  }
+}
+
+.all{
+  width: 100dvw;
+}
+
+.sidebar-title {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  backdrop-filter: blur(10px);
+  z-index: 3;
+  width: 100vw;
+  height: 12vh;
+  margin: 0;
+  color: #000000;
+  padding-right: 100px;
+  align-items: center;
+  position: fixed;
+  .menu-icon:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.5s ease;
+  }
+  hr{
+    margin: 0;
+  }
+}
+
+.buscador{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  column-gap: 10px;
+  padding: 1%;
+  .icon{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+    border-radius: 10px;
+    .icon-search{
+      font-size: 150%;
+    }
+  }
+  .icon:hover{
+    background-color: rgba(128, 128, 128, 0.233);
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+    transition: 0.2s ease;
+  }
+}
+.usuario{
+  display: flex;
+  width: auto;
+  height: 100%;
+  align-items: center;
+}
+.sidebar {
+  width: 45%;
+  padding: 2%;
+  height: 100dvh;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+.sidebar.hidden{
+  transition: transform 0.4s ease;
+  transform: translateX(-100%);
+  
+}
+
+.sidebar.visible {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  z-index: 2;
+  transform: translateX(0);
+  align-items: center;
+  justify-content: center;
+  
+}
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  height: auto;
+  background-color: transparent;
+  font-family: Arial, sans-serif;
+  z-index: 1;
+  .btnProducts{
+    height: 50px;
+  }
+}
+
+.sidebar-link {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-decoration: none;
+  padding: 0.4rem;
+  width: 130px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  transition: 0.4s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #353535;
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.4s ease;
+  color: white;
+}
+
+.in{
+  display: block;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  .buttongroup{
+    width: 50%;
+    padding: 4% 8% 4% 8%;
+  }
+}
+
+.productos-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  background-color: #000000;
+  row-gap: 30px;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  align-items: center;
+  justify-items: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card{
+  width: 100%;
+  height: 400px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.imagen{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .titulo{
+  margin: 0;
+  height: 50%;
+  align-content: center;
+  }
+  .categoria{
+    height: 10%;
+  }
+  .precio{
+    height: 10%
+  }
+  .actions{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 26px;
+    opacity: 0;
+    height: 30%;
+    .botones{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      #buttonActions{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .informacion{
+
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translateX(0%);
+    text-align: center;
+    justify-content: center;
+    color: transparent;
+    transition: 0.5s ease;
+    gap: 1rem;
+  }
+  .informacion:hover{
+    background-color: rgba(0, 0, 0, 0.692);
+    transition: 0.5s ease;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 20px rgb(0, 0, 0);
+    .actions{
+      opacity: 1;
+    }
+  }
+  img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+  }
+}
+.btnNav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ratee{
+  justify-items: center;
+}
+
+.perfil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100dvh;
+  padding: 0%;
+  .perfil-info{
+    display: flex;
+    height: 100%;
+    width: 100dvw;
+    justify-content: center;
+    .infoPersonal{
+      background-color: #ffffff;
+      height: 100dvh;
+      gap: 2rem;
+      width: 40%;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 0px 10px black;
+      display: flex;
+      flex-direction: column;
+    }
+    .datos{
+      padding: 5%;
+      width: 100%;
+    }
+  }
+}
